@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080d14"><title>Beyond SMP Staff Portal</title>
+<meta name="description" content="Private Beyond SMP staff portal.">
+<link rel="stylesheet" href="style.css"></head>
+<body><div class="bg-letter">A</div>
+<header><a class="brand" href="https://beyond-smp.com"><img src="logo.png" alt="Beyond SMP"><b>BEYOND SMP</b></a><span>STAFF PORTAL</span></header>
+<main>
+<section id="login" class="card login"><p class="eyebrow">BEYOND SMP</p><h1>Hello.</h1><p>Staff access only.</p>
+<form id="loginForm"><label>Username<input id="username" type="text" autocomplete="username" required placeholder="Your username"></label><label>Password<input id="password" type="password" autocomplete="current-password" required placeholder="Your password"></label><button class="primary">Sign In →</button><p id="loginError" class="error hidden"></p></form></section>
+
+<section id="home" class="hidden"><div class="welcome"><div><p class="eyebrow">STAFF PORTAL</p><h1>Welcome back<span id="displayName"></span>.</h1></div><button id="logout" class="textbtn">Sign out</button></div>
+<div id="ownerTools" class="tool-grid hidden">
+<button class="tool" data-page="applications"><span>📋</span><b>Applications</b><small>Review applicants</small></button>
+<button class="tool" data-page="staff"><span>🛡️</span><b>Staff</b><small>Manage staff access</small></button>
+<button class="tool" data-page="settings"><span>⚙️</span><b>Settings</b><small>Application setup</small></button>
+<button class="tool" data-page="audit"><span>📜</span><b>Audit Log</b><small>Staff activity</small></button>
+</div>
+<div id="moderatorTools" class="tool-grid"><button class="tool" data-page="applications"><span>📋</span><b>Applications</b><small>Review applicants</small></button></div>
+</section>
+
+<section id="applications" class="page hidden"><button class="back">← Dashboard</button><div class="pagehead"><div><p class="eyebrow">APPLICATIONS</p><h2>Applications</h2></div><select id="statusFilter"><option value="all">All</option><option>pending</option><option>reviewing</option><option>accepted</option><option>declined</option></select></div><div id="appList" class="list"><div class="empty">Connect the application submission system and applications will appear here.</div></div></section>
+
+<section id="staff" class="page hidden"><button class="back">← Dashboard</button><p class="eyebrow">OWNER</p><h2>Staff</h2><p class="muted">Manage authorised Beyond SMP staff accounts.</p><div id="staffList" class="list"><div class="empty">Staff accounts will appear here.</div></div></section>
+<section id="settings" class="page hidden"><button class="back">← Dashboard</button><p class="eyebrow">OWNER</p><h2>Settings</h2><div class="info">Application settings will live here. We can move role availability and questions into Supabase later.</div></section>
+<section id="audit" class="page hidden"><button class="back">← Dashboard</button><p class="eyebrow">OWNER</p><h2>Audit Log</h2><div id="auditList" class="list"><div class="empty">Staff activity will appear here.</div></div></section>
+</main><footer>© 2026 Beyond SMP</footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="config.js"></script><script src="script.js"></script>
+</body></html>
